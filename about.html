@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Codweb | Premium Software Solutions from Chhatrapati Sambhajinagar</title>
+    <meta name="description" content="Codweb is a Chhatrapati Sambhajinagar-based software company founded in 2018, building affordable ERP, billing, and mobile apps for Maharashtra's MSMEs. Meet our team.">
+    <link rel="canonical" href="https://www.codweb.in/about.html">
+    
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Codweb Technologies">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --font-main: 'Outfit', sans-serif;
+        }
+        body { font-family: var(--font-main); }
+        
+        .hero-banner {
+            background: radial-gradient(circle at top left, #2563eb, #1e3a8a, #0f172a);
+            padding: 140px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -50px; left: 0; right: 0;
+            height: 100px;
+            background: white;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .story-image-container {
+            position: relative;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: rotate(-1deg);
+            transition: transform 0.5s ease;
+        }
+        
+        .story-image-container:hover {
+            transform: rotate(0deg);
+        }
+
+        .story-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 40px 24px;
+            border-radius: 32px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--primary);
+        }
+
+        .avatar-container {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            padding: 6px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            box-shadow: 0 10px 20px rgba(26, 86, 219, 0.2);
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        .team-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .team-card p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .breadcrumb a { color: white; text-decoration: none; }
+        .breadcrumb span { color: rgba(255,255,255,0.5); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="10" fill="#1A56DB"/>
+                    <path d="M10 22L16 10L22 22H10Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <span>Codweb</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary" style="border-radius: 12px; padding: 12px 24px;">Get Demo</a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="breadcrumb fade-in">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <p>About Us</p>
+                </div>
+                <h1 class="fade-in" style="font-size: 3.5rem; font-weight: 800; margin-bottom: 16px;">What is Codweb and where is it based?</h1>
+                <p class="fade-in" style="font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">Empowering Maharashtra's MSMEs from the heart of Chhatrapati Sambhajinagar.</p>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="section" style="padding-top: 100px;">
+            <div class="container">
+                <div class="story-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                    <div class="fade-in">
+                        <span style="color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 16px; display: block;">Our Legacy</span>
+                        <h2 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 32px; font-weight: 800;">Empowering Local Businesses Since 2018</h2>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">Founded in the heart of Chhatrapati Sambhajinagar near the <strong>Seven Hills Flyover</strong>, Codweb started with a simple mission: to provide world-class software solutions to the small businesses and MSMEs of Marathwada.</p>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">What began as a passionate team in the <strong>Waluj industrial cluster</strong> has now grown into a full-service software house serving over 500 clients across Maharashtra's thriving economic corridors.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px;">
+                            <div style="background: var(--light-bg); padding: 24px; border-radius: 20px;">
+                                <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px;">500+</div>
+                                <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">Clients Served</div>
+                            </div>
+                            <div style="background: var(--light-bg); padding: 24px; border-radius: 20px;">
+                                <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px;">2018</div>
+                                <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">Year Founded</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in story-image-container">
+                        <img src="images/team-office.png" alt="Codweb Collaboration Hub in Chhatrapati Sambhajinagar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership -->
+        <section class="section" style="background-color: var(--light-bg); border-radius: 64px 64px 0 0;">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 style="font-size: 3rem; font-weight: 800;">Meet Our Leadership</h2>
+                    <p>The passionate minds driving digital transformation across Maharashtra.</p>
+                </div>
+                <div class="team-grid">
+                    <!-- Shrikant -->
+                    <div class="team-card fade-in">
+                        <div class="avatar-container">
+                            <img src="images/shrikant-headshot.png" alt="Shrikant Deshmukh - Founder & CEO">
+                        </div>
+                        <h3>Shrikant Deshmukh</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <!-- Aishwarya -->
+                    <div class="team-card fade-in">
+                        <div class="avatar-container">
+                            <img src="images/female-headshot.png" alt="Aishwarya Deshmukh - Head of Operations">
+                        </div>
+                        <h3>Aishwarya Deshmukh</h3>
+                        <p>Head of Operations</p>
+                    </div>
+                    <!-- Priya -->
+                    <div class="team-card fade-in">
+                        <div class="avatar-container">
+                            <img src="images/female-headshot.png" alt="Priya Deshmukh - Head of Sales">
+                        </div>
+                        <h3>Priya Deshmukh</h3>
+                        <p>Head of Sales</p>
+                    </div>
+                    <!-- Shashikant -->
+                    <div class="team-card fade-in">
+                        <div class="avatar-container">
+                            <img src="images/shrikant-headshot.png" alt="Shashikant Deshmukh - Head of Marketing">
+                        </div>
+                        <h3>Shashikant Deshmukh</h3>
+                        <p>Head of Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                  <span class="footer-logo">Codweb</span>
+                  <p>Powering Maharashtra's Digital Growth with smart, affordable software for MSMEs.</p>
+                  <span class="footer-badge">Made in Maharashtra</span>
+                </div>
+                <div class="footer-col">
+                  <h4>Quick links</h4>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contact us</h4>
+                  <address>
+                    Plot No. 23, Shivamudra, CSN - 431009<br>
+                    <a href="tel:+919404124875">+91 94041 24875</a><br>
+                    codwebsoftware@gmail.com
+                  </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Codweb Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

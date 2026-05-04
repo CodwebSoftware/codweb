@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Software Products & Services | Premium ERP, CRM & Mobile Apps — Codweb</title>
+    <meta name="description" content="Explore Codweb's full range: GST billing software, inventory ERP, hospital HMS, school ERP, society portals, CRM, and Android mobile apps for Indian businesses.">
+    <link rel="canonical" href="https://www.codweb.in/services.html">
+    
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Codweb Technologies">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --font-main: 'Outfit', sans-serif;
+        }
+        body { font-family: var(--font-main); }
+        
+        .hero-banner {
+            background: radial-gradient(circle at top left, #2563eb, #1e3a8a, #0f172a);
+            padding: 140px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -50px; left: 0; right: 0;
+            height: 100px;
+            background: white;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+            padding-top: 60px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 48px;
+            border-radius: 40px;
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--primary);
+            box-shadow: 0 30px 60px rgba(26, 86, 219, 0.1);
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 32px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-box svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-group .btn {
+            flex: 1;
+            padding: 14px 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 14px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-price {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 10px 20px rgba(26, 86, 219, 0.2);
+        }
+        
+        .btn-price:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        .btn-case {
+            background: var(--light-bg);
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-case:hover {
+            background: #eff6ff;
+            border-color: var(--primary);
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .breadcrumb a { color: white; text-decoration: none; }
+        .breadcrumb span { color: rgba(255,255,255,0.5); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="10" fill="#1A56DB"/>
+                    <path d="M10 22L16 10L22 22H10Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <span>Codweb</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary" style="border-radius: 12px; padding: 12px 24px;">Get Demo</a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="breadcrumb fade-in">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <p>Our Services</p>
+                </div>
+                <h1 class="fade-in" style="font-size: 3.5rem; font-weight: 800; margin-bottom: 16px;">What software does Codweb offer?</h1>
+                <p class="fade-in" style="font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">High-performance digital solutions tailored for Maharashtra's growing business ecosystem.</p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="section" style="padding-top: 100px;">
+            <div class="container">
+                <div class="service-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                    <!-- GST Billing -->
+                    <div class="service-card fade-in">
+                        <div class="icon-box" style="background: linear-gradient(135deg, #eff6ff, #dbeafe);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#1A56DB" stroke-width="1.5"><path d="M9 7h6m-6 4h6m-6 4h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/><path d="M9 3v18"/></svg>
+                        </div>
+                        <h3>How does Codweb GST handle local Marathi billing?</h3>
+                        <p>Built for the Maharashtra market with a native Marathi UI and Chhatrapati Sambhajinagar tax pre-sets.</p>
+                        <ul class="feature-list">
+                            <li>WhatsApp Invoicing</li>
+                            <li>GSTR-1 & 3B Filing</li>
+                            <li>Offline-Capable Sync</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="pricing.html" class="btn btn-price">View Pricing →</a>
+                            <a href="portfolio.html" class="btn btn-case">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- ERP -->
+                    <div class="service-card fade-in">
+                        <div class="icon-box" style="background: linear-gradient(135deg, #fef2f2, #fecaca);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                        </div>
+                        <h3>Why is Codweb ERP ideal for CSN MIDC zones?</h3>
+                        <p>Manage production in Waluj or Chikhalthana with localized inventory and 4-hour on-site support.</p>
+                        <ul class="feature-list">
+                            <li>Multi-warehouse Control</li>
+                            <li>Production Planning</li>
+                            <li>Advanced Analytics</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="pricing.html" class="btn btn-price">View Pricing →</a>
+                            <a href="portfolio.html" class="btn btn-case">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Society Portal -->
+                    <div class="service-card fade-in">
+                        <div class="icon-box" style="background: linear-gradient(135deg, #f0fdf4, #bbf7d0);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg>
+                        </div>
+                        <h3>Smart Society Management Portal</h3>
+                        <p>Streamline maintenance and resident communication for communities in Pune and Mumbai.</p>
+                        <ul class="feature-list">
+                            <li>Maintenance Billing</li>
+                            <li>Visitor Tracking</li>
+                            <li>Resident App</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="pricing.html" class="btn btn-price">View Pricing →</a>
+                            <a href="portfolio.html" class="btn btn-case">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- School ERP -->
+                    <div class="service-card fade-in">
+                        <div class="icon-box" style="background: linear-gradient(135deg, #eef2ff, #c7d2fe);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422A12.083 12.083 0 0121 12.667V17.5l-9 5-9-5v-4.833c0-.996.57-1.905 1.476-2.337L12 14z"/></svg>
+                        </div>
+                        <h3>School & Coaching Institute ERP</h3>
+                        <p>The leading administrative platform for educational institutes across Maharashtra.</p>
+                        <ul class="feature-list">
+                            <li>Fee Management</li>
+                            <li>Exam Scheduling</li>
+                            <li>Parent-Teacher App</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="pricing.html" class="btn btn-price">View Pricing →</a>
+                            <a href="portfolio.html" class="btn btn-case">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Hospital HMS -->
+                    <div class="service-card fade-in">
+                        <div class="icon-box" style="background: linear-gradient(135deg, #fdf2f8, #fbcfe8);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        </div>
+                        <h3>Integrated Hospital Management (HMS)</h3>
+                        <p>Manage clinics and hospitals with integrated OPD/IPD, pharmacy, and laboratory modules.</p>
+                        <ul class="feature-list">
+                            <li>OPD/IPD Workflow</li>
+                            <li>Pharmacy Billing</li>
+                            <li>Health Records (EMR)</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="pricing.html" class="btn btn-price">View Pricing →</a>
+                            <a href="portfolio.html" class="btn btn-case">Case Study</a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Apps -->
+                    <div class="service-card fade-in">
+                        <div class="icon-box" style="background: linear-gradient(135deg, #ecfdf5, #a7f3d0);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                        </div>
+                        <h3>Custom Business Mobile Apps</h3>
+                        <p>Field sales, delivery tracking, and custom Android/iOS solutions for your unique business needs.</p>
+                        <ul class="feature-list">
+                            <li>Native Android/iOS</li>
+                            <li>Offline Data Sync</li>
+                            <li>Real-time Tracking</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="pricing.html" class="btn btn-price">View Pricing →</a>
+                            <a href="portfolio.html" class="btn btn-case">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                  <span class="footer-logo">Codweb</span>
+                  <p>Powering Maharashtra's Digital Growth with smart, affordable software for MSMEs.</p>
+                  <span class="footer-badge">Made in Maharashtra</span>
+                </div>
+                <div class="footer-col">
+                  <h4>Quick links</h4>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contact us</h4>
+                  <address>
+                    Plot No. 23, Shivamudra, CSN - 431009<br>
+                    <a href="tel:+919404124875">+91 94041 24875</a><br>
+                    codwebsoftware@gmail.com
+                  </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Codweb Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

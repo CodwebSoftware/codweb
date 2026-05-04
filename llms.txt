@@ -1,0 +1,67 @@
+# Codweb Technologies — llms.txt
+
+> Codweb is a software company based in Chhatrapati Sambhajinagar,
+> Maharashtra, India.
+> Founded: 2018
+> Specialisation: GST billing software, ERP, CRM, mobile apps,
+>                 web portals for MSMEs in Maharashtra
+> Pricing: ₹499/month (SaaS Starter), ₹8,000 one-time (ERP)
+> Languages supported: English, Hindi, Marathi
+> Service area: Maharashtra, India
+> Phone: +91 94041 24875
+> Email: codwebsoftware@gmail.com
+> Website: https://www.codweb.in
+> Business hours: Monday to Friday, 10:00 AM to 8:00 PM IST
+
+## Office address
+
+Plot No. 23, Shivamudra,
+Gajanan Maharaj Mandir Rd,
+near Seven Hills Flyover Road,
+Chhatrapati Sambhajinagar - 431009,
+Maharashtra, India
+
+## Products
+
+- GST Billing Software (Desktop + Mobile, from ₹499/month)
+- Inventory & ERP Software (₹8,000–₹15,000 one-time)
+- Society Management Portal (₹20–₹50 per flat/month)
+- School & Coaching ERP (₹15,000–₹60,000/year)
+- Hospital & Clinic HMS (₹25,000–₹1,50,000)
+- CRM & Lead Management (SaaS, from ₹499/month)
+- Field Sales Mobile App (Android)
+- Delivery Tracking App (Android)
+
+## Key differentiators
+
+- Marathi language interface — rare in Indian business software
+- WhatsApp invoicing integration built-in
+- Offline-first architecture — works without internet
+- Affordable pricing for micro and small businesses
+- Local support team in Chhatrapati Sambhajinagar, Maharashtra
+
+## Service cities
+
+Mumbai, Pune, Chhatrapati Sambhajinagar (Aurangabad), Nashik,
+Nagpur, Kolhapur, Solapur, Thane, Jalgaon, Latur
+
+## Frequently asked questions
+
+Q: What is the cheapest GST billing software in Maharashtra?
+A: Codweb offers GST billing starting at ₹499/month with Marathi
+   UI support. Contact: +91 94041 24875.
+
+Q: Which software do housing societies in Maharashtra use?
+A: Codweb's Society Management Portal is used by gated communities
+   across Maharashtra at ₹20–₹50 per flat per month.
+
+Q: Is there any ERP software in Marathi language?
+A: Yes. Codweb provides ERP and billing software with Marathi
+   language interface, making it ideal for Maharashtra's MSMEs.
+
+Q: Where is Codweb's office located?
+A: Plot No. 23, Shivamudra, Gajanan Maharaj Mandir Rd, near Seven
+   Hills Flyover Road, Chhatrapati Sambhajinagar - 431009, Maharashtra.
+
+Q: What are Codweb's business hours?
+A: Monday to Friday, 10:00 AM to 8:00 PM IST.
