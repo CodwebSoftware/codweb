@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pricing Plans | Premium GST Billing & ERP Software — Codweb</title>
+    <meta name="description" content="Transparent pricing for Codweb software. SaaS plans from ₹499/month. One-time ERP from ₹8,000. School ERP, HMS, society portal pricing included. Free trial available.">
+    <link rel="canonical" href="https://www.codweb.in/pricing.html">
+    
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="author" content="Codweb Technologies">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --font-main: 'Outfit', sans-serif;
+        }
+        body { font-family: var(--font-main); }
+        
+        .hero-banner {
+            background: radial-gradient(circle at top left, #2563eb, #1e3a8a, #0f172a);
+            padding: 140px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -50px; left: 0; right: 0;
+            height: 100px;
+            background: white;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            padding-top: 60px;
+            align-items: flex-start;
+        }
+
+        .price-card {
+            background: white;
+            padding: 48px 40px;
+            border-radius: 40px;
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            text-align: center;
+        }
+
+        .price-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--primary);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+        }
+
+        .price-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(26, 86, 219, 0.08);
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        
+        .price-card.featured:hover {
+            transform: scale(1.05) translateY(-12px);
+        }
+
+        .badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(26, 86, 219, 0.2);
+        }
+
+        .price-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 24px;
+        }
+
+        .price-value {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+        }
+
+        .price-value span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .price-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            min-height: 48px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px;
+            text-align: left;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .btn-price {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: var(--dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .featured .btn-price {
+            background: var(--primary);
+            box-shadow: 0 10px 20px rgba(26, 86, 219, 0.2);
+        }
+
+        .btn-price:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .breadcrumb a { color: white; text-decoration: none; }
+        .breadcrumb span { color: rgba(255,255,255,0.5); }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 80px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .trust-item svg { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="10" fill="#1A56DB"/>
+                    <path d="M10 22L16 10L22 22H10Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                <span>Codweb</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary" style="border-radius: 12px; padding: 12px 24px;">Get Demo</a>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+            <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+            <a href="blog.html" class="mobile-nav-link">Blog</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="breadcrumb fade-in">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <p>Pricing Plans</p>
+                </div>
+                <h1 class="fade-in" style="font-size: 3.5rem; font-weight: 800; margin-bottom: 16px;">How much does Codweb software cost?</h1>
+                <p class="fade-in" style="font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto;">Simple, transparent, and built to scale with your business in Maharashtra.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="section" style="padding-top: 80px;">
+            <div class="container">
+                <div class="pricing-toggle fade-in">
+                    <span>Monthly</span>
+                    <label class="switch">
+                        <input type="checkbox" id="billing-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Yearly <strong style="color: var(--accent);">(Save 20%)</strong></span>
+                </div>
+
+                <div class="pricing-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+                    <!-- Starter -->
+                    <div class="price-card fade-in">
+                        <h3>Starter Plan</h3>
+                        <div class="price-value">₹<span id="starter-price">499</span><span>/mo</span></div>
+                        <p class="price-description">Ideal for single-user retail shops and pharmacies.</p>
+                        <ul class="feature-list">
+                            <li>1 User Account</li>
+                            <li>GST Billing & GSTR Filing</li>
+                            <li>WhatsApp Invoicing</li>
+                            <li>Basic Inventory Control</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-price">Get Started</a>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="price-card featured fade-in">
+                        <span class="badge">Most Popular</span>
+                        <h3>Business Plan</h3>
+                        <div class="price-value">₹<span id="business-price">1299</span><span>/mo</span></div>
+                        <p class="price-description">Perfect for growing MSMEs with multi-user needs.</p>
+                        <ul class="feature-list">
+                            <li>5 User Accounts</li>
+                            <li>Full ERP Suite Access</li>
+                            <li>Advanced Inventory / CRM</li>
+                            <li>Mobile App Access</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-price">Get Started</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="price-card fade-in">
+                        <h3>Enterprise Plan</h3>
+                        <div class="price-value">₹<span id="enterprise-price">2999</span><span>/mo</span></div>
+                        <p class="price-description">Customized for large-scale operations and MIDCs.</p>
+                        <ul class="feature-list">
+                            <li>Unlimited Users</li>
+                            <li>Custom Module Development</li>
+                            <li>Dedicated API Integration</li>
+                            <li>On-site Setup at CSN Facility</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-price">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges fade-in">
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        100% Secure Cloud
+                    </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        14-Day Free Trial
+                    </div>
+                    <div class="trust-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Local CSN Support
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: var(--light-bg); border-radius: 64px 64px 0 0;">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 style="font-size: 2.5rem; font-weight: 800;">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-container fade-in" style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is the starting price of Codweb GST billing software?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Codweb's GST billing software starts at ₹499 per month for 1 user. This includes GST-compliant invoicing, WhatsApp billing, and basic inventory tracking. Annual plans offer 20% savings.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is there a free trial available?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, Codweb offers a 14-day free trial on all SaaS plans. You can request a free demo by calling +91 94041 24875.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Does the software work offline?
+                            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. Codweb's desktop ERP and billing software works fully offline and syncs data to the cloud automatically when internet is available. This makes it ideal for businesses in semi-urban Maharashtra.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                  <span class="footer-logo">Codweb</span>
+                  <p>Powering Maharashtra's Digital Growth with smart, affordable software for MSMEs.</p>
+                  <span class="footer-badge">Made in Maharashtra</span>
+                </div>
+                <div class="footer-col">
+                  <h4>Quick links</h4>
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contact us</h4>
+                  <address>
+                    Plot No. 23, Shivamudra, CSN - 431009<br>
+                    <a href="tel:+919404124875">+91 94041 24875</a><br>
+                    codwebsoftware@gmail.com
+                  </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Codweb Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Billing Toggle Logic
+        const toggle = document.getElementById('billing-toggle');
+        const starter = document.getElementById('starter-price');
+        const business = document.getElementById('business-price');
+        const enterprise = document.getElementById('enterprise-price');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                starter.innerText = '399';
+                business.innerText = '999';
+                enterprise.innerText = '2399';
+            } else {
+                starter.innerText = '499';
+                business.innerText = '1299';
+                enterprise.innerText = '2999';
+            }
+        });
+
+        // FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
