@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Codweb Solutions – Engineering meets marketing alchemy. High-performance software, data-driven campaigns, and conversion-centric design.">
+  <meta name="keywords" content="software development, digital marketing, nextjs, react, seo, cro, ai agency">
+  <meta name="author" content="Codweb Solutions">
+  <meta name="theme-color" content="#05080f">
+  <title>Codweb Solutions | Code + Marketing Agency</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Codweb Solutions",
+    "url": "https://codweb.dev",
+    "logo": "https://codweb.dev/logo.svg",
+    "description": "Engineering meets marketing alchemy. High-performance software, data-driven campaigns, and conversion-centric design.",
+    "sameAs": ["https://twitter.com/codweb", "https://linkedin.com/company/codweb"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@codweb.dev"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Background Canvas (generative mesh) -->
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="logo">CODWEB<span>⎯</span>SOLUTIONS</div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#case-studies">Work</a></li>
+          <li><a href="#tech-stack">Tech</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> Next‑gen agency · Dev + Growth
+        </div>
+        <h1 class="hero-title">
+          <span class="gradient-text">Engineering meets</span><br>
+          marketing alchemy.
+        </h1>
+        <p class="hero-subtitle">
+          High‑performance software, data‑driven campaigns, and conversion‑centric design — unified.<br>
+          Codweb Solutions builds the bridge between clean code and scalable growth.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary">Launch a project →</button>
+          <button class="btn-secondary">Watch showreel</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento Services Grid -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Integrated capabilities</h2>
+          <p>Modular solutions that combine technical depth with marketing intelligence.</p>
+        </div>
+        <div class="bento-grid">
+          <div class="bento-card glass-card span-2">
+            <div class="icon-code"></div>
+            <h3>Software Engineering</h3>
+            <p>Next.js, Node, Python – scalable architecture & AI integration.</p>
+            <span class="pill dev-pill">Engineering</span>
+          </div>
+          <div class="bento-card glass-card">
+            <div class="icon-chart"></div>
+            <h3>Digital Marketing</h3>
+            <p>SEO, CRO, paid media – data-driven revenue growth.</p>
+            <span class="pill mkt-pill">Marketing</span>
+          </div>
+          <div class="bento-card glass-card">
+            <div class="icon-robot"></div>
+            <h3>AI & Automation</h3>
+            <p>LLM agents, marketing automation, predictive analytics.</p>
+            <span class="pill dev-pill">Engineering</span>
+          </div>
+          <div class="bento-card glass-card">
+            <div class="icon-ad"></div>
+            <h3>Paid Media</h3>
+            <p>Google/Meta campaigns with creative testing & ROAS focus.</p>
+            <span class="pill mkt-pill">Marketing</span>
+          </div>
+          <div class="bento-card glass-card span-2">
+            <div class="icon-cloud"></div>
+            <h3>Cloud & DevOps</h3>
+            <p>AWS, Vercel, CI/CD – low‑carbon infrastructure.</p>
+            <span class="pill dev-pill">Engineering</span>
+          </div>
+          <div class="bento-card glass-card">
+            <div class="icon-db"></div>
+            <h3>Data Engineering</h3>
+            <p>ETL pipelines, BI dashboards, attribution modeling.</p>
+            <span class="pill dev-pill">Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Tiles -->
+    <section id="case-studies" class="section case-studies">
+      <div class="container">
+        <div class="section-header">
+          <h2>Success stories</h2>
+          <p>Real impact: where code + creative amplify ROI</p>
+        </div>
+        <div class="cases-grid">
+          <div class="case-card glass-card">
+            <div class="case-image bg-gradient-fintech">
+              <span class="case-roi">+187% ROI</span>
+            </div>
+            <div class="case-content">
+              <div class="case-header">
+                <h3>Fintech AI SaaS</h3>
+                <span class="case-category">Full‑stack + ML</span>
+              </div>
+              <div class="case-tech-stack">
+                <span>React</span><span>FastAPI</span><span>TensorFlow</span>
+              </div>
+              <p class="case-metrics">Conversion lift: 187% · Deploy freq: daily</p>
+            </div>
+          </div>
+          <div class="case-card glass-card">
+            <div class="case-image bg-gradient-ecommerce">
+              <span class="case-roi">+230% Revenue</span>
+            </div>
+            <div class="case-content">
+              <div class="case-header">
+                <h3>E‑commerce Growth</h3>
+                <span class="case-category">Marketing + CRO</span>
+              </div>
+              <div class="case-tech-stack">
+                <span>Next.js</span><span>Shopify</span><span>GA4</span>
+              </div>
+              <p class="case-metrics">ROAS +340% · SEO traffic +400%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Marquee -->
+    <section id="tech-stack" class="section tech-stack">
+      <div class="container">
+        <div class="section-header">
+          <h2>Modern engineering stack</h2>
+          <p>Tools we master to ship with speed & reliability</p>
+        </div>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span>React</span><span>Node.js</span><span>Python</span><span>Next.js</span>
+            <span>Tailwind</span><span>AWS</span><span>PostgreSQL</span><span>Figma</span>
+            <span>React</span><span>Node.js</span><span>Python</span><span>Next.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="contact-card glass-card">
+          <h2>Let's build something legendary</h2>
+          <p>Adaptive form — changes based on your focus.</p>
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <input type="text" placeholder="Full name" required>
+              <input type="email" placeholder="Email address" required>
+            </div>
+            <select id="project-type" required>
+              <option value="software">Software Engineering project</option>
+              <option value="marketing">Digital Marketing campaign</option>
+              <option value="integrated">Integrated: Dev + Marketing</option>
+            </select>
+            <input type="text" id="dynamic-input" placeholder="Tell us about your technical requirements" required>
+            <textarea rows="3" placeholder="Additional context..."></textarea>
+            <button type="submit" class="btn-primary">Submit inquiry →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Codweb Solutions — Where code meets creative intelligence. Built with pure HTML5/CSS3/JS.</p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
