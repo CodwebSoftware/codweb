@@ -7,9 +7,9 @@
     <!-- Remix Icons -->
     <link href="../assets/css/remixicon.css" rel="stylesheet">
     <!-- Bootstrap grid utilities -->
-    <link rel="stylesheet" href="../doctor/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         /* Extra styles for new high-conversion slides and grids to prevent white space */
         .slide-split-grid {
@@ -220,9 +220,14 @@
                 </div>
             </div>
 
-            <div class="d-flex align-items-center gap-3 mt-2 mb-2 justify-content-center">
-                <button class="btn btn-primary" id="slide-prev" title="Previous Slide"><i class="ri-arrow-left-s-line"></i> Back</button>
-                <button class="btn btn-primary" id="slide-next" title="Next Slide">Next <i class="ri-arrow-right-s-line"></i></button>
+            <div class="d-flex flex-column align-items-stretch gap-2 mt-2 mb-2 px-3">
+                <div class="d-flex gap-2 w-100 justify-content-center">
+                    <button class="btn btn-primary flex-grow-1" id="slide-prev" title="Previous Slide" style="justify-content: center;"><i class="ri-arrow-left-s-line"></i> Back</button>
+                    <button class="btn btn-primary flex-grow-1" id="slide-next" title="Next Slide" style="justify-content: center;">Next <i class="ri-arrow-right-s-line"></i></button>
+                </div>
+                <button class="btn btn-secondary w-100" id="sidebar-fullscreen-btn" title="Toggle Fullscreen" style="border-radius: 8px; justify-content: center;">
+                    <i class="ri-fullscreen-fill"></i> Go Full Screen
+                </button>
             </div>
         </aside>
 
@@ -230,11 +235,14 @@
         <main class="presentation-canvas">
             
             <!-- Canvas Header -->
-            <header class="canvas-header">
+            <header class="canvas-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <div class="canvas-title-wrapper">
                     <span class="canvas-title" id="active-slide-title">Welcome</span>
                     <span class="canvas-subtitle" id="active-slide-badge">Overview</span>
                 </div>
+                <button class="btn btn-primary" id="canvas-fullscreen-btn" title="Toggle Fullscreen" style="border-radius: 12px; display: flex; align-items: center; gap: 8px;">
+                    <i class="ri-fullscreen-fill"></i> <span>Full Screen</span>
+                </button>
             </header>
 
             <!-- Slide Canvas Content -->
@@ -1176,79 +1184,76 @@
                     <div class="slide-split-grid">
                         <div>
                             <span class="slide-badge">Get Started</span>
-                            <h2 class="slide-title-text" style="font-size:2.4rem; margin-bottom: 0.5rem;">Launch Your Digital Clinic Today</h2>
+                            <h2 class="slide-title-text" style="font-size:2.2rem; margin-bottom: 0.5rem; line-height:1.2;">Launch Your Digital Clinic Today</h2>
                             <p class="slide-desc-text mb-3">
-                                Register your details to arrange a screen-share walkthrough or download our installation guide brochure.
+                                Get immediate access to our self-hosted platform. Call us to arrange a remote screen-share walkthrough or get installation setup assistance.
                             </p>
                             <div class="d-flex flex-column gap-3 mb-3">
+                                <div class="d-flex align-items-center gap-3">
+                                    <i class="ri-phone-fill text-primary fs-2"></i>
+                                    <div>
+                                        <strong class="text-dark d-block" style="font-size:0.9rem;">Call Direct Support</strong>
+                                        <a href="tel:+919404124875" class="text-primary small" style="font-weight:600; font-size: 1rem;">+91 94041 24875</a>
+                                    </div>
+                                </div>
                                 <div class="d-flex align-items-center gap-3">
                                     <i class="ri-whatsapp-line text-success fs-2"></i>
                                     <div>
                                         <strong class="text-dark d-block" style="font-size:0.9rem;">Chat on WhatsApp</strong>
-                                        <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20a%20demo%20of%20E-Arogya%20Pro" target="_blank" class="text-primary small" style="font-weight:600;">+91 98765 43210</a>
+                                        <a href="https://wa.me/919404124875?text=Hi,%20I%20am%20interested%20in%20a%20demo%20of%20E-Arogya%20Pro" target="_blank" class="text-success small" style="font-weight:600; font-size: 1rem;">+91 94041 24875</a>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="ri-customer-service-2-line text-indigo fs-2" style="color:var(--secondary);"></i>
+                                    <i class="ri-mail-fill text-indigo fs-2" style="color:var(--secondary);"></i>
                                     <div>
-                                        <strong class="text-dark d-block" style="font-size:0.9rem;">Customer Success Desk</strong>
-                                        <small class="text-muted">support@edoc.com</small>
+                                        <strong class="text-dark d-block" style="font-size:0.9rem;">Email Helpdesk</strong>
+                                        <a href="mailto:codwebsoftware@gmail.com" class="text-muted small" style="font-size: 0.95rem;">codwebsoftware@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <form id="lead-form" onsubmit="submitLead(event)" class="bg-white p-4 rounded border" style="box-shadow:var(--shadow-sm); width: 100%;">
-                            <div class="row g-3">
-                                <div class="col-md-6 form-group">
-                                    <label>Your Name *</label>
-                                    <input type="text" id="lead-name" class="form-control" placeholder="Dr. Sameer Patil" required>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <label>Mobile Number *</label>
-                                    <input type="tel" id="lead-phone" class="form-control" placeholder="9876543210" required>
-                                </div>
-                                <div class="col-12 form-group">
-                                    <label>Clinic / Hospital Name *</label>
-                                    <input type="text" id="lead-clinic" class="form-control" placeholder="Patil Health Clinic, Pune" required>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <label>Medical Center Type</label>
-                                    <select id="lead-type" class="form-select">
-                                        <option value="clinic">Clinic / Outpatient</option>
-                                        <option value="pharmacy">Pharmacy Only</option>
-                                        <option value="combined">Combined Clinic + Pharmacy</option>
-                                        <option value="hospital">Hospital / Multi-Doctor</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <label>Preferred Contact Mode</label>
-                                    <select id="lead-mode" class="form-select">
-                                        <option value="whatsapp">WhatsApp Text</option>
-                                        <option value="call">Direct Call Back</option>
-                                        <option value="screenshare">Google Meet Demo</option>
-                                    </select>
-                                </div>
-                                <input type="hidden" id="lead-message" value="Requested presentation demo">
-                                <div class="col-12 mt-2">
-                                    <button type="submit" class="btn btn-primary w-100 py-2"><i class="ri-checkbox-circle-line"></i> Request Personalized Demo</button>
-                                </div>
+                        <div class="bg-white p-4 rounded border text-center d-flex flex-column align-items-center justify-content-center gap-3" style="box-shadow:var(--shadow-sm); width: 100%; min-height: 320px; background: linear-gradient(135deg, #ffffff, #f8fafc);">
+                            <div style="background: #eff6ff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 4px;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.81 12.81 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                             </div>
-                        </form>
+                            <h3 style="font-size: 1.75rem; font-weight: 800; color: #0f172a; margin: 0;">Need Assistance?</h3>
+                            <p style="font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.5;">Call us directly for immediate support. We are available to help you set up and get started.</p>
+                            <div style="font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 1.6rem;">
+                                <span>📞</span>
+                                <a href="tel:+919404124875" style="color: inherit; text-decoration: none; border-bottom: 2px dashed rgba(37, 99, 235, 0.4);">+91 94041 24875</a>
+                            </div>
+                            <div class="d-flex gap-2 w-100 mt-2">
+                                <a href="tel:+919404124875" class="btn btn-primary flex-grow-1 py-2" style="font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 10px;">
+                                    <i class="ri-phone-fill"></i> Call Now
+                                </a>
+                                <a href="https://wa.me/919404124875?text=Hi,%20I%20need%20assistance%20regarding%20E-Arogya%20Pro" target="_blank" class="btn btn-success flex-grow-1 py-2" style="font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 10px; background-color: #25d366; border-color: #25d366; color: white;">
+                                    <i class="ri-whatsapp-line"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </main>
 
+        <!-- Floating Fullscreen Toolbar -->
+        <div class="fullscreen-toolbar" id="fullscreen-toolbar">
+            <button class="btn-toolbar" id="fs-prev" title="Previous Slide"><i class="ri-arrow-left-s-line"></i> Previous</button>
+            <span class="toolbar-counter" id="fs-counter">1 / 18</span>
+            <button class="btn-toolbar" id="fs-next" title="Next Slide">Next <i class="ri-arrow-right-s-line"></i></button>
+            <button class="btn-toolbar btn-play" id="fs-play" title="Play Autoplay"><i class="ri-play-fill"></i></button>
+            <button class="btn-toolbar" id="fs-toggle" title="Toggle Fullscreen"><i class="ri-fullscreen-exit-line"></i> Exit Fullscreen</button>
+        </div>
     </div>
 
     <!-- Scripts -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/chart.min.js"></script>
-    <script src="js/presentation.min.js"></script>
-    <script src="js/roi-calculator.min.js"></script>
+    <script src="js/presentation.js"></script>
+    <script src="js/roi-calculator.js"></script>
     <script>
         // Case studies switching data
         const casesData = [

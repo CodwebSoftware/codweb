@@ -78,6 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (jumpSelect) {
             jumpSelect.value = currentSlideIndex.toString();
         }
+
+        // Update fullscreen toolbar counter and buttons
+        const fsCounter = document.getElementById('fs-counter');
+        if (fsCounter) {
+            fsCounter.textContent = `${currentSlideIndex + 1} / ${totalSlides}`;
+        }
+        const fsPrev = document.getElementById('fs-prev');
+        const fsNext = document.getElementById('fs-next');
+        if (fsPrev) fsPrev.disabled = currentSlideIndex === 0;
+        if (fsNext) fsNext.disabled = currentSlideIndex === totalSlides - 1;
     }
 
     function nextSlide() {
@@ -96,15 +106,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 3. AUTOPLAY SEQUENCE
     function toggleAutoplay() {
+        const fsPlay = document.getElementById('fs-play');
+        const fsPlayIcon = fsPlay ? fsPlay.querySelector('i') : null;
         if (isAutoplayActive) {
             clearInterval(autoplayInterval);
             isAutoplayActive = false;
             if (playIcon) playIcon.className = 'ri-play-fill';
             if (playBtn) playBtn.title = 'Start Autoplay';
+            if (fsPlayIcon) fsPlayIcon.className = 'ri-play-fill';
+            if (fsPlay) fsPlay.title = 'Start Autoplay';
         } else {
             isAutoplayActive = true;
             if (playIcon) playIcon.className = 'ri-pause-fill';
             if (playBtn) playBtn.title = 'Pause Autoplay';
+            if (fsPlayIcon) fsPlayIcon.className = 'ri-pause-fill';
+            if (fsPlay) fsPlay.title = 'Pause Autoplay';
             autoplayInterval = setInterval(nextSlide, autoplayDuration);
         }
     }
@@ -141,6 +157,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
     if (playBtn) playBtn.addEventListener('click', toggleAutoplay);
     
+    const fsPrev = document.getElementById('fs-prev');
+    const fsNext = document.getElementById('fs-next');
+    const fsPlay = document.getElementById('fs-play');
+    if (fsPrev) fsPrev.addEventListener('click', prevSlide);
+    if (fsNext) fsNext.addEventListener('click', nextSlide);
+    if (fsPlay) fsPlay.addEventListener('click', toggleAutoplay);
+
     if (jumpSelect) {
         jumpSelect.addEventListener('change', function() {
             showSlide(parseInt(jumpSelect.value));
@@ -165,6 +188,13 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (e.key === ' ') {
             e.preventDefault();
             toggleAutoplay();
+        } else if (e.key === 'f' || e.key === 'F') {
+            e.preventDefault();
+            toggleFullscreen();
+        } else if (e.key === 'Escape' || e.key === 'Esc') {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
         }
     });
 
@@ -191,26 +221,58 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 9. FULLSCREEN CONTROLLER
-    if (fullscreenBtn) {
-        fullscreenBtn.addEventListener('click', function() {
-            if (!document.fullscreenElement) {
-                // Request fullscreen on parent element to let scale adjustments work cleanly
-                document.documentElement.requestFullscreen().catch(err => {
-                    console.error(`Fullscreen request failed: ${err.message}`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        });
+    const fullscreenButtons = [
+        document.getElementById('slide-fullscreen'),
+        document.getElementById('canvas-fullscreen-btn'),
+        document.getElementById('sidebar-fullscreen-btn'),
+        document.getElementById('fs-toggle')
+    ].filter(el => el !== null);
 
-        document.addEventListener('fullscreenchange', function() {
-            if (document.fullscreenElement) {
-                fullscreenBtn.querySelector('i').className = 'ri-fullscreen-exit-fill';
-            } else {
-                fullscreenBtn.querySelector('i').className = 'ri-fullscreen-fill';
-            }
-        });
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            viewport.requestFullscreen().catch(err => {
+                console.error(`Fullscreen request failed: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
     }
+
+    fullscreenButtons.forEach(btn => {
+        btn.addEventListener('click', toggleFullscreen);
+    });
+
+    document.addEventListener('fullscreenchange', function() {
+        if (document.fullscreenElement === viewport) {
+            viewport.classList.add('fullscreen-active');
+            fullscreenButtons.forEach(btn => {
+                const icon = btn.querySelector('i');
+                const span = btn.querySelector('span');
+                if (icon) icon.className = 'ri-fullscreen-exit-fill';
+                if (span) {
+                    if (btn.id === 'fs-toggle') {
+                        span.textContent = 'Exit Fullscreen';
+                    } else {
+                        span.textContent = 'Exit';
+                    }
+                }
+            });
+        } else {
+            viewport.classList.remove('fullscreen-active');
+            fullscreenButtons.forEach(btn => {
+                const icon = btn.querySelector('i');
+                const span = btn.querySelector('span');
+                if (icon) icon.className = 'ri-fullscreen-fill';
+                if (span) {
+                    if (btn.id === 'sidebar-fullscreen-btn') {
+                        span.textContent = 'Go Full Screen';
+                    } else {
+                        span.textContent = 'Full Screen';
+                    }
+                }
+            });
+        }
+    });
 
     // Initialize slide deck state
     showSlide(0);
