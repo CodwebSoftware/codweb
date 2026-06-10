@@ -1822,5 +1822,47 @@ body.dark-mode .slide-cta-text {
         font-size: 0.75rem;
         padding: 0.5rem;
     }
+
+    .canvas-header {
+        height: 50px !important;
+    }
+
+    .canvas-footer {
+        height: 50px !important;
+    }
+}
+
+@media (max-height: 550px) {
+    .canvas-header {
+        height: 48px !important;
+    }
+    .canvas-footer {
+        height: 48px !important;
+    }
+    .slide {
+        padding: 0.75rem 1rem !important;
+    }
+    .slide-title-text {
+        font-size: 1.15rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    .slide-desc-text {
+        font-size: 0.78rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .takeaway-banner {
+        font-size: 0.7rem !important;
+        padding: 0.35rem 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+    .kpi-row {
+        margin-top: 0.5rem !important;
+    }
+    .kpi-mini-card {
+        padding: 0.35rem !important;
+    }
+    .kpi-mini-card strong {
+        font-size: 0.85rem !important;
+    }
 }
 
