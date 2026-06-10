@@ -126,6 +126,20 @@
         
         .breadcrumb a { color: white; text-decoration: none; }
         .breadcrumb span { color: rgba(255,255,255,0.5); }
+
+        .story-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 480px) {
+            .story-stats-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -187,7 +201,7 @@
                         <h2 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 32px; font-weight: 800;">Empowering Local Businesses Since 2018</h2>
                         <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">Founded in the heart of Chhatrapati Sambhajinagar near the <strong>Seven Hills Flyover</strong>, Codweb started with a simple mission: to provide world-class software solutions to the small businesses and MSMEs of Marathwada.</p>
                         <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.8;">What began as a passionate team in the <strong>Waluj industrial cluster</strong> has now grown into a full-service software house serving over 500 clients across Maharashtra's thriving economic corridors.</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px;">
+                        <div class="story-stats-grid">
                             <div style="background: var(--light-bg); padding: 24px; border-radius: 20px;">
                                 <div style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px;">500+</div>
                                 <div style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">Clients Served</div>
