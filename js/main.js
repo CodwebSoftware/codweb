@@ -19,17 +19,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (overlay) {
-        overlay.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            body.classList.remove('no-scroll');
-            
+    const closeMenu = () => {
+        if (mobileMenu) mobileMenu.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        body.classList.remove('no-scroll');
+        
+        if (hamburger) {
             const spans = hamburger.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        });
+            if (spans.length >= 3) {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        }
+    };
+
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
+
+    const closeBtn = document.querySelector('.close-menu');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
     }
 
     // 2. Header Scroll Effect
