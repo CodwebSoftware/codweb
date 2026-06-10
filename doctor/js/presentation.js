@@ -274,6 +274,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // 10. SIDEBAR COLLAPSIBLE & MOBILE DRAWER CONTROLLERS
+    const sidebarCollapseBtn = document.getElementById('sidebar-collapse-btn');
+    const hamburgerToggleBtn = document.getElementById('hamburger-toggle-btn');
+    const sidebar = document.querySelector('.presentation-sidebar');
+
+    if (sidebarCollapseBtn) {
+        sidebarCollapseBtn.addEventListener('click', () => {
+            viewport.classList.toggle('sidebar-collapsed');
+            const icon = sidebarCollapseBtn.querySelector('i');
+            if (icon) {
+                if (viewport.classList.contains('sidebar-collapsed')) {
+                    icon.className = 'ri-indent-increase';
+                } else {
+                    icon.className = 'ri-indent-decrease';
+                }
+            }
+        });
+    }
+
+    if (hamburgerToggleBtn) {
+        hamburgerToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            viewport.classList.toggle('sidebar-open');
+        });
+    }
+
+    // Close mobile drawer when clicking menu items
+    sidebarItems.forEach(item => {
+        item.addEventListener('click', () => {
+            viewport.classList.remove('sidebar-open');
+        });
+    });
+
+    // Close mobile drawer when clicking backdrop
+    if (sidebar) {
+        sidebar.addEventListener('click', (e) => {
+            if (viewport.classList.contains('sidebar-open') && e.clientX > 280) {
+                viewport.classList.remove('sidebar-open');
+            }
+        });
+    }
+
     // Initialize slide deck state
     showSlide(0);
 });

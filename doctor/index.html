@@ -135,9 +135,14 @@
         <!-- Sidebar Slide Explorer -->
         <aside class="presentation-sidebar">
             <div class="sidebar-header">
-                <div class="sidebar-logo">
-                    <i class="ri-heart-pulse-fill"></i>
-                    <span>ई-आरोग्य Pro</span>
+                <div class="sidebar-logo" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="ri-heart-pulse-fill"></i>
+                        <span class="sidebar-logo-text">ई-आरोग्य Pro</span>
+                    </div>
+                    <button class="btn p-0 border-0" id="sidebar-collapse-btn" title="Collapse Sidebar" style="color: var(--primary); display: flex; align-items: center; background: transparent;">
+                        <i class="ri-indent-decrease"></i>
+                    </button>
                 </div>
                 <div class="sidebar-search">
                     <i class="ri-search-line"></i>
@@ -236,7 +241,10 @@
             
             <!-- Canvas Header -->
             <header class="canvas-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="canvas-title-wrapper">
+                <div class="canvas-title-wrapper" style="display: flex; align-items: center; gap: 12px;">
+                    <button class="btn btn-secondary" id="hamburger-toggle-btn" title="Toggle Menu" style="display: none; padding: 8px 12px; border-radius: 8px; justify-content: center; align-items: center;">
+                        <i class="ri-menu-line"></i>
+                    </button>
                     <span class="canvas-title" id="active-slide-title">Welcome</span>
                     <span class="canvas-subtitle" id="active-slide-badge">Overview</span>
                 </div>
@@ -1073,10 +1081,48 @@
                                 <i class="ri-lightbulb-fill"></i> Own your data database forever. Protect your patients' confidential records.
                             </div>
                         </div>
-                        <div class="mockup-card text-center p-4">
-                            <i class="ri-shield-check-fill text-success" style="font-size: 5rem; display:block; margin: 0 auto 1rem;"></i>
-                            <h4 class="fw-bold mb-2">Secure Local Architecture</h4>
-                            <p class="small text-muted mb-0">Patient history and clinical records are kept strictly in your local database inside the hospital premises.</p>
+                        <div class="mockup-card p-4" style="background: linear-gradient(135deg, #ffffff, #f0fdf4); border: 2px solid rgba(16, 185, 129, 0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div style="background: #d1fae5; color: #059669; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i class="ri-shield-keyhole-fill" style="font-size: 1.5rem; margin-bottom: 0;"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold mb-0" style="font-size: 1.15rem; color: #0b2545;">Secure Local Architecture</h4>
+                                    <small class="text-success fw-bold">100% In-Hospital Data Containment</small>
+                                </div>
+                            </div>
+                            <p class="small text-muted mb-3" style="line-height: 1.5; font-size: 0.8rem;">
+                                Patient records, clinical histories, and pharmacy accounts are hosted on-premises. Zero external cloud exposure, zero subscription dependency, zero data leakage.
+                            </p>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="p-2 border rounded bg-white" style="border-left: 3px solid #10b981 !important;">
+                                        <strong class="d-block text-dark small">AES-256</strong>
+                                        <small class="text-muted" style="font-size: 0.65rem;">DB Encryption</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-2 border rounded bg-white" style="border-left: 3px solid #10b981 !important;">
+                                        <strong class="d-block text-dark small">NMC Ready</strong>
+                                        <small class="text-muted" style="font-size: 0.65rem;">Audit Compliant</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-2 border rounded bg-white" style="border-left: 3px solid #10b981 !important;">
+                                        <strong class="d-block text-dark small">Daily Sync</strong>
+                                        <small class="text-muted" style="font-size: 0.65rem;">Auto Local Backup</small>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-2 border rounded bg-white" style="border-left: 3px solid #10b981 !important;">
+                                        <strong class="d-block text-dark small">Off-Grid</strong>
+                                        <small class="text-muted" style="font-size: 0.65rem;">Works Offline</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 p-2 bg-white rounded border text-center small text-muted" style="font-size: 0.72rem;">
+                                <i class="ri-information-line text-success"></i> Fully compliant with digital health safety policies in India.
+                            </div>
                         </div>
                     </div>
                 </div>

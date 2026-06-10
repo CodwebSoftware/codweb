@@ -125,6 +125,8 @@ body {
 
 .sidebar-menu-list {
     flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 0;
     overflow-y: auto;
     padding: 0.5rem;
     display: flex;
@@ -1646,82 +1648,173 @@ body.dark-mode .slide-cta-text {
     }
 }
 
-/* Tablet portrait and landscape */
-@media (max-width: 1024px) {
-    #presentation-viewport {
-        flex-direction: column;
+/* Sidebar transition and alignment */
+.presentation-sidebar {
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Collapsible Sidebar Styles for Desktop & Tablet */
+#presentation-viewport.sidebar-collapsed .presentation-sidebar {
+    width: 80px;
+}
+#presentation-viewport.sidebar-collapsed .sidebar-logo-text,
+#presentation-viewport.sidebar-collapsed .sidebar-search,
+#presentation-viewport.sidebar-collapsed .sidebar-menu-item .slide-name,
+#presentation-viewport.sidebar-collapsed .presentation-sidebar .d-flex.flex-column.align-items-stretch {
+    display: none !important;
+}
+#presentation-viewport.sidebar-collapsed .sidebar-menu-item {
+    justify-content: center;
+    padding: 0.75rem 0;
+}
+#presentation-viewport.sidebar-collapsed .sidebar-logo {
+    justify-content: center;
+}
+#presentation-viewport.sidebar-collapsed #sidebar-collapse-btn i {
+    transform: rotate(180deg);
+}
+
+/* Tablet Media Queries (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Collapsed sidebar by default on tablets to optimize slide canvas space */
+    #presentation-viewport:not(.sidebar-collapsed) .presentation-sidebar {
+        width: 80px;
     }
-    .presentation-sidebar {
-        width: 100%;
-        height: auto;
-        max-height: 200px;
-        border-right: none;
-        border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+    #presentation-viewport:not(.sidebar-collapsed) .sidebar-logo-text,
+    #presentation-viewport:not(.sidebar-collapsed) .sidebar-search,
+    #presentation-viewport:not(.sidebar-collapsed) .sidebar-menu-item .slide-name,
+    #presentation-viewport:not(.sidebar-collapsed) .presentation-sidebar .d-flex.flex-column.align-items-stretch {
+        display: none !important;
     }
-    .sidebar-menu-list {
-        flex-direction: row;
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
-        padding: 0.5rem;
+    #presentation-viewport:not(.sidebar-collapsed) .sidebar-menu-item {
+        justify-content: center;
+        padding: 0.75rem 0;
     }
-    .sidebar-menu-item {
-        display: inline-flex;
-        padding: 0.4rem 0.8rem;
+    #presentation-viewport:not(.sidebar-collapsed) .sidebar-logo {
+        justify-content: center;
     }
-    .presentation-canvas {
-        height: calc(100vh - 200px);
+    #presentation-viewport:not(.sidebar-collapsed) #sidebar-collapse-btn i {
+        transform: rotate(180deg);
+    }
+    
+    /* When expanded explicitly by user click on tablet */
+    #presentation-viewport.sidebar-collapsed .presentation-sidebar {
+        width: 280px;
+    }
+    #presentation-viewport.sidebar-collapsed .sidebar-logo-text,
+    #presentation-viewport.sidebar-collapsed .sidebar-search,
+    #presentation-viewport.sidebar-collapsed .sidebar-menu-item .slide-name,
+    #presentation-viewport.sidebar-collapsed .presentation-sidebar .d-flex.flex-column.align-items-stretch {
+        display: flex !important;
+    }
+    #presentation-viewport.sidebar-collapsed .sidebar-logo {
+        justify-content: space-between;
+    }
+
+    .slide {
+        padding: 1.5rem 2.5rem;
     }
     .slide-split-grid {
-        grid-template-columns: 1fr;
         gap: 1.5rem;
-        overflow-y: auto;
-    }
-    .laptop-mockup, .browser-mockup {
-        max-width: 100%;
     }
     .laptop-screen, .browser-body {
-        max-height: 250px;
+        max-height: 25vh;
     }
 }
 
-/* Mobile landscape/portrait constraints */
+/* Mobile Media Queries (< 768px) */
 @media (max-width: 768px) {
+    #presentation-viewport {
+        position: relative;
+    }
+
+    /* Offcanvas sidebar menu drawer */
     .presentation-sidebar {
-        max-height: 140px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 280px;
+        z-index: 9999;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: none;
     }
-    .sidebar-header {
-        display: none !important;
+
+    #presentation-viewport.sidebar-open .presentation-sidebar {
+        transform: translateX(0);
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
     }
-    .presentation-canvas {
-        height: calc(100vh - 140px);
+
+    /* Mobile Sidebar Back/Next and Search buttons should always show */
+    .presentation-sidebar .d-flex.flex-column.align-items-stretch {
+        display: flex !important;
     }
+    
+    /* Overlay Backdrop when mobile drawer is open */
+    .presentation-sidebar::before {
+        content: '';
+        position: fixed;
+        left: 280px;
+        top: 0;
+        width: calc(100vw - 280px);
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.4);
+        backdrop-filter: blur(2px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    #presentation-viewport.sidebar-open .presentation-sidebar::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .slide {
+        padding: 1rem 1.5rem;
+        overflow-y: auto !important;
+    }
+    
+    .slide-split-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .slide-title-text {
-        font-size: 1.25rem;
+        font-size: 1.35rem !important;
     }
+
     .slide-desc-text {
-        font-size: 0.85rem;
+        font-size: 0.85rem !important;
         margin-bottom: 0.75rem;
     }
+
     .slide-card-grid, .pricing-grid, .roi-table-grid {
         grid-template-columns: 1fr !important;
-        gap: 0.5rem;
+        gap: 0.75rem;
     }
+
     .slide-card, .pricing-card, .roi-table-card {
-        padding: 0.75rem;
+        padding: 1rem;
     }
+
     .laptop-screen, .browser-body {
-        max-height: 180px;
+        max-height: 20vh;
     }
+
     .kpi-row {
         gap: 0.5rem;
     }
+
     .kpi-mini-card {
         padding: 0.5rem;
     }
+
     .kpi-mini-card strong {
         font-size: 0.95rem;
     }
+
     .takeaway-banner {
         font-size: 0.75rem;
         padding: 0.5rem;
